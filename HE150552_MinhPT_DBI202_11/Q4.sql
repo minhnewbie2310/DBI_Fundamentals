@@ -1,0 +1,1 @@
+select order_id, order_date,customer_id,first_name,last_name,store_name from orders inner join (staffs inner join stores on staffs.store_id = stores.store_id) on orders.staff_id = staffs.staff_id where store_name ='Santa Cruz Bikes' and YEAR(order_date) =2016 and MONTH(order_date) = 1

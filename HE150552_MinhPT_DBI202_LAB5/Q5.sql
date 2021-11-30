@@ -1,0 +1,1 @@
+select customers.customerNumber ,customerName, city, country, SUM(amount) as totalAmountOfPayments from payments inner join customers on payments.customerNumber = customers.customerNumber group by customers.customerNumber,customerName, city, country having country = 'Germany' order by totalAmountOfPayments asc 

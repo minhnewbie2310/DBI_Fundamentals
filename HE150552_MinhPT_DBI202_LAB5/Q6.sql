@@ -1,0 +1,1 @@
+select customers.customerNumber, customerName, city, [state], country from payments inner join customers on payments.customerNumber = customers.customerNumber group by customers.customerNumber, customerName, city, [state], country having sum(amount) = (select top 1 SUM(amount) from payments group by customerNumber order by sum(amount) desc)

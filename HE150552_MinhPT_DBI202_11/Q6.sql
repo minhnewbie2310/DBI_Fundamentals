@@ -1,0 +1,1 @@
+Select top 2 orders.customer_id, first_name, last_name, COUNT(orders.customer_id) as NumberOfOrders from customers inner join orders on customers.customer_id = orders.customer_id group by orders.customer_id, first_name, last_name 

@@ -1,0 +1,2 @@
+
+select store_name, orders.staff_id, first_name, last_name, count(store_name) as NumberOfOrders from orders inner join (staffs inner join stores on staffs.store_id = stores.store_id) on orders.staff_id = staffs.staff_id group by store_name, orders.staff_id, first_name, last_name having orders.staff_id = 7 or orders.staff_id = 8 or orders.staff_id = 3 order by store_name asc

@@ -1,0 +1,1 @@
+select orders.store_id, store_name, COUNT(orders.order_date) as NumberOfOrdersIn2018 from orders inner join (staffs inner join stores on staffs.store_id = stores.store_id) on orders.staff_id = staffs.staff_id group by orders.store_id, store_name,YEAR(order_date) having YEAR(order_date)=2018 order by NumberOfOrdersIn2018 desc

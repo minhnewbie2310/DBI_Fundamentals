@@ -1,0 +1,1 @@
+Select * from customers where state = 'CA'

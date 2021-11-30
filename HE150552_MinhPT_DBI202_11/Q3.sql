@@ -1,0 +1,1 @@
+select product_name,model_year,list_price,brand_name from products where brand_name ='Trek' and list_price > 3000 and model_year=2018 order by list_price asc

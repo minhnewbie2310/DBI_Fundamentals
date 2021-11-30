@@ -1,0 +1,1 @@
+select  customerNumber, customerName, city, country, salesRepEmployeeNumber, lastName as employeeLastName,   firstName as employeeFirstName from customers inner join employees on customers.salesRepEmployeeNumber = employees.employeeNumber where city = 'Paris' or city = 'NYC' or city = 'Brickhaven' order by city desc

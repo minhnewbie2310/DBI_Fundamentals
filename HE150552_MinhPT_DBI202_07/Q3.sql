@@ -1,0 +1,1 @@
+Select Customer.ID,CustomerName, Segment,Country,City,[State],PostalCode,Region From Customer inner join Orders on Customer.ID = Orders.CustomerID Where CustomerName like 'b%' and Month(OrderDate) = 12 and YEAR(OrderDate) = 2017 Order by Segment desc, CustomerName asc

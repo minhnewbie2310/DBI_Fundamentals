@@ -1,0 +1,1 @@
+Select SubCategoryID,SubCategoryName, COUNT(SubCategory.ID) as NumberOfProducts from SubCategory inner join Product on SubCategory.ID = Product.SubCategoryID group by SubCategoryID, SubCategoryName having COUNT(SubCategory.ID) > 100 order by COUNT(SubCategory.ID) desc
